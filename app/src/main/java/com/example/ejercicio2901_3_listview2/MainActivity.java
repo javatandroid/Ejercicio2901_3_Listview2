@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        tvEjercicioPrincipal=(TextView)findViewById(R.id.tvPrincipal);
+        tvEjercicioSecundario=(TextView)findViewById(R.id.tvSecundario);
+
+
         lvEjercicios=(ListView)findViewById(R.id.lvLista);
 
         String[] ejercicios = {"Press Banca", "Extensión triceps", "Biceps concentrado",
