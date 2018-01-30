@@ -36,18 +36,23 @@ public class MainActivity extends AppCompatActivity {
         lvEjercicios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String ejercicio_seleccionado = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(), "Has seleccionado"+ejercicio_seleccionado, Toast.LENGTH_SHORT).show();
-
+                String ejercicio_seleccionado1 = parent.getItemAtPosition(position).toString();
+                //Lo siguiente sería para que apareciera en la burbujita negra inferior, pero no es nuestro caso
+                /*Toast.makeText(getApplicationContext(), "Has seleccionado"+ejercicio_seleccionado, Toast.LENGTH_SHORT).show();
+*/
+                tvEjercicioPrincipal.setText(ejercicio_seleccionado1);
             }
         });
 
         lvEjercicios.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                String ejercicio_seleccionado = parent.getItemAtPosition(position).toString();
-                Toast.makeText(getApplicationContext(), "Has seleccionado como secundario"+ejercicio_seleccionado,);
+                String ejercicio_seleccionado2 = parent.getItemAtPosition(position).toString();
+                /*Toast.makeText(getApplicationContext(), "Has seleccionado como secundario"+ejercicio_seleccionado,);
                 return true;
+                */
+                tvEjercicioSecundario.setText(ejercicio_seleccionado2);
+
             }
         });
 
